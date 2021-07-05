@@ -1,0 +1,22 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:buster
+
+RUN install_packages \
+    libgles2-mesa \
+    matchbox-window-manager \
+    mesa-vdpau-drivers \
+    x11-xserver-utils \
+    x11-utils \
+    xauth \
+    xinit \
+    xserver-xorg \
+    xserver-xorg-input-evdev \
+    xserver-xorg-legacy \
+    xserver-xorg-video-fbdev
+
+WORKDIR /opt/x11
+
+COPY xinitrc /root/.xinitrc
+
+COPY entry.sh VERSION ./
+
+ENTRYPOINT  ["sh", "/opt/x11/entry.sh"]

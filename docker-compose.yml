@@ -1,0 +1,14 @@
+version: "2"
+services:
+  x11:
+    build: ./
+    restart: always
+    privileged: true
+    network_mode: host
+  xeyes:
+    build: ./example/xeyes
+    restart: always
+    privileged: true
+    network_mode: host
+    depends_on:
+      - x11
