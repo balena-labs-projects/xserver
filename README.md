@@ -4,4 +4,4 @@ A simple X11 server block, which starts [matchbox window manager](https://www.us
 
 ## Usage
 
-Set the `DISPLAY` variable in your application to `localhost:0` before running any GUI applications
+Set the `DISPLAY` variable in your application to `<xserver host>:0` where <xserver host> is the name of the container running the X server before running any GUI applications. Set `ALLOWED_HOSTS` to a comma delimited string of hosts that need to connect to the server.
