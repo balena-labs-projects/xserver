@@ -14,8 +14,10 @@ RUN install_packages \
     xinput \
     xserver-xorg \
     xserver-xorg-input-all \
+    xserver-xorg-input-evdev \
     xserver-xorg-legacy \
-    xserver-xorg-video-all
+    xserver-xorg-video-all \
+    xserver-xorg-video-intel
 
 WORKDIR /opt/x11
 
