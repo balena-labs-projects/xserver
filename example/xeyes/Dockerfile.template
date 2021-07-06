@@ -2,6 +2,4 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:buster
 
 RUN install_packages x11-apps
 
-ENV DISPLAY=localhost:0
-
 ENTRYPOINT  ["xeyes"]
