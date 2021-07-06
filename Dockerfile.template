@@ -3,7 +3,6 @@ ARG BALENA_ARCH=%%BALENA_ARCH%%
 FROM balenalib/$BALENA_ARCH-debian:buster
 
 RUN install_packages \
-    libgl1-mesa-dri \
     libgles2-mesa \
     matchbox-window-manager \
     mesa-vdpau-drivers \
