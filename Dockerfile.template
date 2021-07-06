@@ -16,8 +16,7 @@ RUN install_packages \
     xserver-xorg-input-all \
     xserver-xorg-input-evdev \
     xserver-xorg-legacy \
-    xserver-xorg-video-all \
-    xserver-xorg-video-intel
+    xserver-xorg-video-all
 
 WORKDIR /opt/x11
 
