@@ -1,19 +1,21 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:buster
+ARG BALENA_ARCH=%%BALENA_ARCH%%
+
+FROM balenalib/$BALENA_ARCH-debian:buster
 
 RUN install_packages \
+    libgl1-mesa-dri \
     libgles2-mesa \
     matchbox-window-manager \
     mesa-vdpau-drivers \
-    unclutter \
     x11-xserver-utils \
     x11-utils \
     xauth \
     xinit \
+    xinput \
     xserver-xorg \
     xserver-xorg-input-all \
-    xserver-xorg-input-evdev \
     xserver-xorg-legacy \
-    xserver-xorg-video-fbdev
+    xserver-xorg-video-all
 
 WORKDIR /opt/x11
 
@@ -23,5 +25,5 @@ COPY entry.sh VERSION ./
 
 ENTRYPOINT  ["sh", "/opt/x11/entry.sh"]
 
-ENV UDEV=1 \
-    CURSOR=false
+ENV CURSOR=true \
+    UDEV=on
