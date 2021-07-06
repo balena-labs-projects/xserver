@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-BLOCK_NAME="x11"
+BLOCK_NAME="xserver"
 
 function build_and_push_image () {
   local BALENA_ARCH=$1

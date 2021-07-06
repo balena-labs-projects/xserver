@@ -1,6 +1,6 @@
 version: "2.1"
 services:
-  x11:
+  xserver:
     build: ./
     restart: always
     privileged: true
@@ -11,4 +11,4 @@ services:
     privileged: true
     network_mode: host
     depends_on:
-      - x11
+      - xserver

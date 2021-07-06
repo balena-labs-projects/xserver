@@ -1,6 +1,6 @@
-# x11
+# xserver
 
-A simple X11 server block, which starts [matchbox window manager](https://www.usenix.org/legacy/publications/library/proceedings/usenix03/tech/freenix03/full_papers/allum/allum_html/matchbox.html)
+A simple xserver server block, which starts [matchbox window manager](https://www.usenix.org/legacy/publications/library/proceedings/usenix03/tech/freenix03/full_papers/allum/allum_html/matchbox.html)
 
 ## Usage
 
