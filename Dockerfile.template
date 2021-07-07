@@ -17,13 +17,13 @@ RUN install_packages \
     xserver-xorg-legacy \
     xserver-xorg-video-all
 
-WORKDIR /opt/xserver
+WORKDIR /opt/display
 
 COPY xinitrc /root/.xinitrc
 
 COPY entry.sh VERSION ./
 
-ENTRYPOINT  ["sh", "/opt/xserver/entry.sh"]
+ENTRYPOINT  ["sh", "/opt/display/entry.sh"]
 
 ENV CURSOR=true \
     UDEV=on

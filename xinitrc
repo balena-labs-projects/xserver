@@ -1,4 +1,4 @@
-xhost +localhost
+xhost +
 xset s off -dpms
 
 if [ "$CURSOR" = true ]; 

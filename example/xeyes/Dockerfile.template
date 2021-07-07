@@ -4,4 +4,4 @@ RUN install_packages x11-apps
 
 ENTRYPOINT  ["xeyes"]
 
-ENV DISPLAY=localhost:0
+ENV DISPLAY=:0

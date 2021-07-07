@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
+# kill previous x11 sockets that have persisted before
+rm -r /tmp/.X11-unix 2>/dev/null
+
 /usr/bin/entry.sh echo "Running balena base image entrypoint..."
 
 export DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
 
-echo "balenaBlocks xserver version: $(cat VERSION)"
+echo "balenaBlocks display version: $(cat VERSION)"
 
 # If the vcgencmd is supported (i.e. RPi device) - check enough GPU memory is allocated
 if command -v vcgencmd &> /dev/null
@@ -16,4 +19,4 @@ then
 	fi
 fi
 
-startx -- -listen tcp
+exec startx
