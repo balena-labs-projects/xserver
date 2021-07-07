@@ -26,6 +26,9 @@ services:
       - 'x11:/tmp/.X11-unix'
 ```
 
+### TODO: intro / explaination of an xserver and how it works
+
+### TODO: using the Xorg DBUS API
 
 ### Environment variables
 
