@@ -1,10 +1,10 @@
-# display block
+# xserver block
 
 A simple block that runs an X server for GUI applications. This block uses [matchbox window manager](https://www.usenix.org/legacy/publications/library/proceedings/usenix03/tech/freenix03/full_papers/allum/allum_html/matchbox.html) by default.
 
 ## Usage
 
-You will need to mount to unix socket from the `display` container, and set the `DISPLAY` variable in your application to `:0` before running any GUI applications.
+You will need to mount to unix socket from the `xserver` container, and set the `DISPLAY` variable in your application to `:0` before running any GUI applications.
 
 Here is an example `docker-compose.yml` from this repo:
 
@@ -18,8 +18,8 @@ services:
     restart: always
     volumes:
       - 'x11:/tmp/.X11-unix'
-  display:
-    image: balenablocks/display
+  xserver:
+    image: balenablocks/xserver
     restart: always
     privileged: true
     volumes:
@@ -29,7 +29,7 @@ services:
 
 ### Environment variables
 
-The following environment variables allow configuration of the `display` block:
+The following environment variables allow configuration of the `xserver` block:
 
 | Environment variable | Options | Default | Description |
 | --- | --- | --- | --- |

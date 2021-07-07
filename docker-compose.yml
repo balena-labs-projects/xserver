@@ -1,15 +1,15 @@
 version: "2.1"
 volumes:
-  display:
+  xserver:
 services:
-  display:
+  xserver:
     build: ./
     restart: always
     privileged: true
     volumes:
-      - 'display:/tmp/.X11-unix'
+      - 'xserver:/tmp/.X11-unix'
   xeyes:
     build: ./example/xeyes
     restart: always
     volumes:
-      - 'display:/tmp/.X11-unix'
+      - 'xserver:/tmp/.X11-unix'

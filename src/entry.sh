@@ -7,7 +7,7 @@ rm -r /tmp/.X11-unix 2>/dev/null
 
 export DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
 
-echo "balenaBlocks display version: $(cat VERSION)"
+echo "balenaBlocks xserver version: $(cat VERSION)"
 
 # If the vcgencmd is supported (i.e. RPi device) - check enough GPU memory is allocated
 if command -v vcgencmd &> /dev/null
