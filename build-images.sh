@@ -38,6 +38,6 @@ VERSION=${2:-$(<VERSION)}
 build_and_push_image "aarch64" "linux/arm64" 
 build_and_push_image "amd64" "linux/amd64"
 build_and_push_image "armv7hf" "linux/arm/v7" 
-build_and_push_image "rpi" "linux/arm/v6" 
+build_and_push_image "rpi" "linux/arm/v6"
 
 create_and_push_manifest
