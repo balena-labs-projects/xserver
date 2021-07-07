@@ -1,6 +1,8 @@
 xhost +
 xset s off -dpms
 
+bash /opt/display/config.sh
+
 if [ "$CURSOR" = true ]; 
 then
     matchbox-window-manager -use_titlebar no

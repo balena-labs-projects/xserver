@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# kill previous x11 sockets that have persisted before
+# kill previous x11 sockets that have persisted
 rm -r /tmp/.X11-unix 2>/dev/null
 
 /usr/bin/entry.sh echo "Running balena base image entrypoint..."

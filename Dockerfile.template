@@ -3,7 +3,6 @@ ARG BALENA_ARCH=%%BALENA_ARCH%%
 FROM balenalib/$BALENA_ARCH-debian:buster
 
 RUN install_packages \
-    libgles2-mesa \
     matchbox-window-manager \
     mesa-vdpau-drivers \
     x11-xserver-utils \
@@ -19,9 +18,9 @@ RUN install_packages \
 
 WORKDIR /opt/display
 
-COPY xinitrc /root/.xinitrc
+COPY src/xinitrc /root/.xinitrc
 
-COPY entry.sh VERSION ./
+COPY src/entry.sh src/config.sh VERSION /opt/display/
 
 ENTRYPOINT  ["sh", "/opt/display/entry.sh"]
 

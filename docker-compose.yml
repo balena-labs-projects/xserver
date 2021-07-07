@@ -6,13 +6,10 @@ services:
     build: ./
     restart: always
     privileged: true
-    network_mode: host
     volumes:
       - 'display:/tmp/.X11-unix'
   xeyes:
     build: ./example/xeyes
     restart: always
-    privileged: true
-    network_mode: host
     volumes:
       - 'display:/tmp/.X11-unix'
