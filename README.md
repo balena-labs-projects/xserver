@@ -16,6 +16,10 @@ services:
   glxgears:
     build: ./example/glxgears
     restart: always
+    devices:
+      - /dev/dri
+    group_add:
+      - video
     volumes:
       - 'x11:/tmp/.X11-unix'
   xserver:
