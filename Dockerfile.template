@@ -4,6 +4,8 @@ FROM balenalib/$BALENA_ARCH-debian:buster
 
 RUN install_packages \
     matchbox-window-manager \
+    mesa-utils \
+    mesa-utils-extra \
     mesa-vdpau-drivers \
     x11-xserver-utils \
     x11-utils \
