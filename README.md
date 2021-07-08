@@ -26,6 +26,31 @@ services:
       - 'x11:/tmp/.X11-unix'
 ```
 
+### Hardware Acceleration
+
+By default, applications will use llvmpipe for rendering graphics. If you need hardware acceleration, your container needs access to the device nodes under `/dev/dri`, as well as permission to use them. Typically these nodes are owned by `root:video`, as seen below.
+
+```
+root@balena:~# ls -la /dev/dri
+total 0
+drwxr-xr-x  3 root root       100 Jul  8 19:32 .
+drwxr-xr-x 16 root root      3740 Jul  8 20:35 ..
+drwxr-xr-x  2 root root        80 Jul  8 19:32 by-path
+crw-rw----  1 root video 226,   0 Jul  8 20:35 card0
+crw-rw-rw-  1 root root  226, 128 Jul  8 20:35 renderD128
+```
+
+The open source Mesa graphics drivers interact with `/dev/dri/card0` for managing buffers and job queueing, so your container also needs permissions for the `video` group to access this node.
+
+```
+devices:
+  - /dev/dri
+group_add:
+  - video
+```
+
+Note, however, that group IDs do not always match up between images. In this case, you'll need to assign the group by GID, and ensure that the group exists in your container. If the group name and ID match your host, you can use the group name directly.
+
 ### TODO: intro / explaination of an xserver and how it works
 
 ### TODO: using the Xorg DBUS API
