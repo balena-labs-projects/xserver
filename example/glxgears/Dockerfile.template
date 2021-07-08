@@ -1,4 +1,4 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:bullseye-20210705
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:bullseye
 
 RUN install_packages \
     x11-apps \
