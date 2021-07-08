@@ -13,8 +13,8 @@ version: "2.1"
 volumes:
   x11:
 services:
-  xeyes:
-    build: ./example/xeyes
+  glxgears:
+    build: ./example/glxgears
     restart: always
     volumes:
       - 'x11:/tmp/.X11-unix'

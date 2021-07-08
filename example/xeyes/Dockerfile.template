@@ -1,7 +1,0 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:buster
-
-RUN install_packages x11-apps
-
-ENTRYPOINT  ["xeyes"]
-
-ENV DISPLAY=:0

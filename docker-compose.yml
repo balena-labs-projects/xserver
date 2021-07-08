@@ -8,8 +8,8 @@ services:
     privileged: true
     volumes:
       - 'xserver:/tmp/.X11-unix'
-  xeyes:
-    build: ./example/xeyes
+  glxgears:
+    build: ./example/glxgears
     restart: always
     volumes:
       - 'xserver:/tmp/.X11-unix'
