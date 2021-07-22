@@ -55,9 +55,12 @@ group_add:
 
 Note, however, that group IDs do not always match up between images. In this case, you'll need to assign the group by GID, and ensure that the group exists in your container. If the group name and ID match your host, you can use the group name directly.
 
-### TODO: intro / explaination of an xserver and how it works
+### TODO: 
+  - intro / explaination of an xserver and how it works
+  - using the Xorg DBUS API
+  - add piTFT rotation support
 
-### TODO: using the Xorg DBUS API
+### 
 
 ### Environment variables
 
