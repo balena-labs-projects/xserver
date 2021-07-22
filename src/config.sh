@@ -26,6 +26,16 @@ if [[ ! -z "$DISPLAY_RATE" ]]; then
 fi
 
 #
+# pitft rotation
+#
+# if [ ! -c /dev/fb1 ] && [ "$TFT" = "true" ]; then
+#   modprobe spi-bcm2708 || true
+#   modprobe fbtft_device name=pitft verbose=0 rotate=${TFT_ROTATE:-0} || true
+#   sleep 1
+#   mknod /dev/fb1 c $(cat /sys/class/graphics/fb1/dev | tr ':' ' ') || true
+# else
+
+#
 # input rotation
 #
 
