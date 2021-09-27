@@ -19,4 +19,9 @@ then
 	fi
 fi
 
-exec startx
+if [ "$CURSOR" = true ];
+then
+    exec startx
+else
+    exec startx -- -nocursor
+fi
