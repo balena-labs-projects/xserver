@@ -30,6 +30,29 @@ services:
       - 'x11:/tmp/.X11-unix'
 ```
 
+
+### Waiting for `xserver` to start
+
+If your application starts before `xserver`, you will probably encounter an error similar to `Unable to open display :0`. This is because your GUI application needs the `xserver` socket file in `/tmp/.X11-unix` to be created and listening for connections. One easy way to solve for this is by waiting for the file to be created before you start your application. Here is an example of an entrypoint script:
+
+```
+#!/bin/bash 
+
+while [ ! -e /tmp/.X11-unix/X${DISPLAY#*:} ]; do sleep 0.5; done
+
+./start_my_app
+```
+
+The example above only waits for the UNIX socket file to be created, but does not check to see if the server is _accepting connections_ yet. Assuming you have `xset` program installed in your container (found in the package `x11-xserver-utils` on debian for example), you can use it to check if connections are ready. Here is an example of another entrypoint script:
+
+```
+#!/bin/bash 
+
+while ! xset -q; do sleep 0.5; done
+
+./start_my_app
+```
+
 ### Hardware Acceleration
 
 By default, applications will use llvmpipe for rendering graphics. If you need hardware acceleration, your container needs access to the device nodes under `/dev/dri`, as well as permission to use them. Typically these nodes are owned by `root:video`, as seen below.
@@ -55,14 +78,12 @@ group_add:
 
 Note, however, that group IDs do not always match up between images. In this case, you'll need to assign the group by GID, and ensure that the group exists in your container. If the group name and ID match your host, you can use the group name directly.
 
-### TODO: 
+## TODO: 
   - intro / explaination of an xserver and how it works
   - using the Xorg DBUS API
   - add piTFT rotation support
 
-### 
-
-### Environment variables
+## Environment variables
 
 The following environment variables allow configuration of the `xserver` block:
 
