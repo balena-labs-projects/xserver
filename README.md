@@ -33,7 +33,7 @@ services:
 
 ### Waiting for `xserver` to start
 
-If your application starts before `xserver`, you will probably encounter an error similar to `Unable to open display :0`. This is because your GUI application needs the `xserver` socket file in `/tmp/.X11-unix` to be created and listening for connections. One easy way to solve for this is by waiting for the file to be created before you start your application. Here is an example of an entrypoint script:
+If your application starts before `xserver`, you will probably encounter an error similar to `Unable to open display :0`. This is because your GUI application needs the `xserver` socket file in `/tmp/.X11-unix` to be created and listening for connections. One easy way to solve for this is by waiting for the file to be created before you start your application. Here is an example of an entrypoint script, which is also in the [glxgears example](example/glxgears/entry.sh):
 
 ```
 #!/bin/bash 

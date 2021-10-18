@@ -5,6 +5,8 @@ RUN install_packages \
     mesa-utils \
     mesa-utils-extra
 
-ENTRYPOINT  ["glxgears"]
+COPY entry.sh /
+
+ENTRYPOINT  ["bash", "entry.sh"]
 
 ENV DISPLAY=:0
