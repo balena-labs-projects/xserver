@@ -3,9 +3,4 @@ xset s off -dpms
 
 bash /opt/xserver/config.sh
 
-if [ "$CURSOR" = true ]; 
-then
-    matchbox-window-manager -use_titlebar no
-else
-    matchbox-window-manager -use_titlebar no -use_cursor no
-fi
+matchbox-window-manager -use_titlebar no
