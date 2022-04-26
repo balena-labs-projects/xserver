@@ -24,4 +24,5 @@ COPY src/entry.sh src/config.sh VERSION /opt/xserver/
 ENTRYPOINT  ["sh", "/opt/xserver/entry.sh"]
 
 ENV CURSOR=true \
-    UDEV=on
+    UDEV=on \
+    FORCE_DISPLAY=:0

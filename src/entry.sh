@@ -5,6 +5,8 @@ rm -r /tmp/.X11-unix 2>/dev/null
 
 /usr/bin/entry.sh echo "Running balena base image entrypoint..."
 
+echo "Setting initial display to FORCE_DISPLAY - $FORCE_DISPLAY"
+
 export DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
 
 echo "balenaBlocks xserver version: $(cat VERSION)"
@@ -21,7 +23,7 @@ fi
 
 if [ "$CURSOR" = true ];
 then
-    exec startx
+    exec startx -- $FORCE_DISPLAY
 else
-    exec startx -- -nocursor
+    exec startx -- $FORCE_DISPLAY -nocursor
 fi
