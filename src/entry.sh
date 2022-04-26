@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-# kill previous x11 sockets that have persisted
+# Cleanup previous references that are not in use. The X server will clean up sockets if they exist. 
 rm -r /tmp/.X11-unix 2>/dev/null
+
+echo "Force display is set to $FORCE_DISPLAY"
 
 /usr/bin/entry.sh echo "Running balena base image entrypoint..."
 
@@ -21,7 +23,7 @@ fi
 
 if [ "$CURSOR" = true ];
 then
-    exec startx
+    exec startx -- $FORCE_DISPLAY
 else
-    exec startx -- -nocursor
+    exec startx -- $FORCE_DISPLAY -nocursor
 fi

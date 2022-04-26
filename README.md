@@ -95,5 +95,6 @@ The following environment variables allow configuration of the `xserver` block:
 |`DISPLAY_DPI`|`Number`|Detected DPI|Set the display DPI|
 |`DISPLAY_RATE`|`Number`|Detected refresh rate|Set the refresh rate|
 |`DISPLAY_ROTATE_TOUCH`|`normal`, `left`, `right`, `inverted`|`normal`|Rotates the coordinates for touch screens|
+|`FORCE_DISPLAY`|`String`|`:0`|Forces a display number for the server to start on. If you are running multiple containers, you will want to set different values for multiple instances (`:1` for a second instance, as an example)|
 
 ---
