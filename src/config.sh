@@ -52,13 +52,13 @@ case $DISPLAY_ROTATE_TOUCH in
     COORDS="1 0 0 0 1 0 0 0 1"
     ;; 
 "right")
-    COORDS="0 -1 1 1 0 0 0 0 1"
+    COORDS="0 1 0 -1 0 1 0 0 1"
     ;;
 "inverted")
     COORDS="-1 0 1 0 -1 1 0 0 1"
     ;;
 "left")
-    COORDS="0 1 0 -1 0 1 0 0 1"
+    COORDS="0 -1 1 1 0 0 0 0 1"
     ;;
 esac
 
