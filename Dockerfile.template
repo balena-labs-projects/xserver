@@ -21,7 +21,7 @@ COPY src/xinitrc /root/.xinitrc
 
 COPY src/entry.sh src/config.sh VERSION /opt/xserver/
 
-ENTRYPOINT  ["sh", "/opt/xserver/entry.sh"]
+ENTRYPOINT  ["/bin/bash", "/opt/xserver/entry.sh"]
 
 ENV CURSOR=true \
     UDEV=on \
