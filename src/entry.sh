@@ -8,7 +8,7 @@ rm -r /tmp/.X11-unix 2>/dev/null
 echo "Setting initial display to FORCE_DISPLAY - $FORCE_DISPLAY"
 
 # destroy any leftover X11 lockfile. credit to @danclimasevschi
-# https://github.com/balenablocks/xserver/issues/16
+# https://github.com/balena-labs-projects/xserver/issues/16
 DISP_NUM=$(echo "$FORCE_DISPLAY" | sed "s/://")
 LOCK_FILE="/tmp/.X${DISP_NUM}-lock"
 if [ -f "$LOCK_FILE" ]; then
@@ -18,7 +18,7 @@ fi
 
 export DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
 
-echo "balenaBlocks xserver version: $(cat VERSION)"
+echo "balenaLabs xserver version: $(cat VERSION)"
 
 # If the vcgencmd is supported (i.e. RPi device) - check enough GPU memory is allocated
 if command -v vcgencmd &> /dev/null
