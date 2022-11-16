@@ -23,7 +23,8 @@ services:
     volumes:
       - 'x11:/tmp/.X11-unix'
   xserver:
-    image: bh.cr/balenalabs/xserver
+    # Replace <arch> with your own machines architecture. The default architecture without a - is `amd64`
+    image: bh.cr/balenalabs/xserver-<arch> 
     restart: always
     privileged: true
     volumes:
