@@ -1,0 +1,156 @@
+- commits:
+    - subject: moving from balenablocks to balena-labs-projects
+      hash: f31c85fca85bc9de38a1da6fdc069e35f21a92d0
+      body: ""
+      footer:
+        Signed-off-by: Flynn Joffray <flynn@balena.io>
+        signed-off-by: Flynn Joffray <flynn@balena.io>
+        Change-type: patch
+        change-type: patch
+      author: Flynn Joffray
+      nested: []
+  version: 0.0.7
+  title: ""
+  date: 2022-11-16T03:10:49.045Z
+- version: 0.0.6
+  date: 2022-10-21T19:53:56Z
+  commits:
+    - hash: afb3eeb93c0788c6b7a994cabfb8e8f9be123834
+      author: Flynn Joffray
+      footers:
+        signed-off-by: Flynn Joffray <nucleardreamer@gmail.com>
+        change-type: patch
+      subject: changing entrypoint script to use bash instead of sh
+      body: null
+- version: 0.0.5
+- date: 2022-10-21T19:22:15Z
+- commits:
+    - hash: 2c10f1017ee01f6eaf79163e3c015fba483d6ab1
+- commits:
+    - author: Flynn Joffray
+- commits:
+    - footers:
+        signed-off-by: Flynn Joffray <nucleardreamer@gmail.com>
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: swapping left and right touch coordinate transform
+- commits:
+    - body: null
+- version: 0.0.4
+- date: 2022-05-11T19:32:33Z
+- commits:
+    - hash: 5718d6450aec9199c7da5597df99242d416efb01
+- commits:
+    - author: Flynn Joffray
+- commits:
+    - footers:
+        signed-off-by: Flynn Joffray <flynn@balena.io>
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: destroying lockfile on entry.sh
+- commits:
+    - body: null
+- version: 0.0.3
+- date: 2022-04-26T22:56:42Z
+- commits:
+    - hash: a4fb4fca74a3e92a06833bbfdb95b4da758c609f
+- commits:
+    - author: Flynn Joffray
+- commits:
+    - footers:
+        signed-off-by: Flynn Joffray <flynn@balena.io>
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: Adding FORCE_DISPLAY variable
+- commits:
+    - body: null
+- version: 0.0.2
+- date: 2022-04-14T19:16:35Z
+- commits:
+    - hash: bff0d6db7906b38989dcfe0803c3d9a5028cdc77
+- commits:
+    - author: German Rivera
+- commits:
+    - subject: "fix: hide-cursor-from-screen"
+- commits:
+    - body: leverage the startx to hide the cursor instead of the xinitrc
+- commits:
+    - hash: c85da8be4914399a96f4e208fa9d30ebbfde1e4a
+- commits:
+    - author: Joseph Kogut
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+- commits:
+    - subject: "Dockerfile: remove mesa-vdpau-drivers"
+- commits:
+    - body: These drivers aren't used by the X server.
+- commits:
+    - hash: 01269464275c0e2fe15e10ecfdfd98d80bf2bebc
+- commits:
+    - author: Joseph Kogut
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+- commits:
+    - subject: "README: add hardware acceleration subsection"
+- commits:
+    - body: null
+- commits:
+    - hash: 48d5b4cb27d97d17d13c0125feab31dfa9bbb3a9
+- commits:
+    - author: Joseph Kogut
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+- commits:
+    - subject: "xauth: only accept non-network local connections"
+- commits:
+    - body: null
+- commits:
+    - hash: 3f6b51c30c64cb7d349916476e279e3409b750fe
+- commits:
+    - author: Joseph Kogut
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+- commits:
+    - subject: "docker-compose: setup dri node w/ perms"
+- commits:
+    - body: |-
+        Add /dev/dri devices to service requiring graphics acceleration, and add
+        video group for permission to access dri nodes.
+- commits:
+    - hash: 0c5aac83336f14fe54c078b081f4425cd210b38a
+- commits:
+    - author: Joseph Kogut
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+- commits:
+    - subject: "Dockerfile.template: use debian bullseye-20210705"
+- commits:
+    - body: |-
+        Use debian bullseye-20210705 tag as base image for newer hardware
+        support.
