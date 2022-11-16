@@ -23,7 +23,7 @@ services:
     volumes:
       - 'x11:/tmp/.X11-unix'
   xserver:
-    image: balenablocks/xserver
+    image: bh.cr/balenalabs/xserver
     restart: always
     privileged: true
     volumes:
