@@ -1,4 +1,16 @@
 - commits:
+    - subject: Change balena.yml type to sw.block
+      hash: e2f9aa532bc4f0a5e78cd29980958ac8403eae4e
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: maggie0002
+      nested: []
+  version: 0.1.0
+  title: ""
+  date: 2023-01-12T16:31:56.076Z
+- commits:
     - subject: moving from balenablocks to balena-labs-projects
       hash: f31c85fca85bc9de38a1da6fdc069e35f21a92d0
       body: ""
